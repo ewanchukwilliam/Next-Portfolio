@@ -65,6 +65,7 @@ const projects = [
       { name: "Node.Js" },
       { name: "Mysql" },
       { name: "Javascript" },
+      { name: "Nginx" },
     ],
     image: "/assets/jobhunting.png",
     live: "",
