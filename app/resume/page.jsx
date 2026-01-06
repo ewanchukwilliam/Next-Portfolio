@@ -287,7 +287,7 @@ const Resume = () => {
 								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
 									{education.description}
 								</p>
-								<ScrollArea className="h-[300px]">
+								<ScrollArea className="h-[400px]">
 									<ul className="grid grid-col-1 lg:grid-cols-2 gap-[30px]">
 										{education.items.map((item, index) => {
 											return (
@@ -321,7 +321,8 @@ const Resume = () => {
 										{skills.description}
 									</p>
 								</div>
-								<ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
+								<ScrollArea className="h-[400px]">
+									<ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
 									{skills.skillList.map((skill, index) => {
 										return (
 											<li key={index}>
@@ -341,6 +342,7 @@ const Resume = () => {
 										);
 									})}
 								</ul>
+								</ScrollArea>
 							</div>
 						</TabsContent>
 						{/* scholarships */}
@@ -350,7 +352,7 @@ const Resume = () => {
 								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
 									{scholarships.description}
 								</p>
-								<ScrollArea className="h-[300px]">
+								<ScrollArea className="h-[400px]">
 									<ul className="grid grid-col-1 lg:grid-cols-2 gap-[30px]">
 										{scholarships.items.map((item, index) => {
 											return (

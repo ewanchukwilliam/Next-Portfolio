@@ -27,9 +27,9 @@ const services = [
   },
   {
     num: "04",
-    title: "SEO",
+    title: "DevOps & Cloud Infrastructure",
     description:
-      "I optimize your website using advanced techniques and tools like Google Analytics and SEMrush. I enhance your site's visibility and search rankings, driving organic traffic and improving online presence.",
+      "I build and maintain scalable cloud infrastructure using AWS (EC2, CloudWatch, Elastic Beanstalk), Docker containerization, and CI/CD pipelines with GitHub Actions. I specialize in deployment automation, Nginx reverse proxies, and monitoring solutions to ensure reliable, high-performance applications.",
     href: "",
   },
 ];
