@@ -22,8 +22,41 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
+    category: "internship",
+    title: "Software Engineer: Full-Stack Developer",
+    description: "10-month internship at Stepscale.ai (November 2024 – August 2025). Implemented Redis caching reducing LLM response latency by 40% and integrated Amplitude analytics for error tracking. Built Stripe billing APIs, AI sandbox for Docker script execution, and monitored deployments via AWS CloudWatch.",
+    stack: [
+      { name: "Django" },
+      { name: "PostgreSQL" },
+      { name: "Langraph" },
+      { name: "AWS" },
+      { name: "Docker" },
+      { name: "Stripe" },
+    ],
+    image: "/assets/stepscale.png",
+    live: "https://stepscale.ai/",
+    github: "",
+  },
+  {
+    num: "02",
+    category: "backend",
+    title: "Insider Trading Tracker: Back-End Developer",
+    description: "Built automated Python ETL pipeline tracking congressional insider trades via hourly cron jobs, aggregating data from 3 financial APIs. Implemented error logging and database monitoring for API performance tracking. Generated plots comparing trade dates with historical options data, deployed via Docker.",
+    stack: [
+      { name: "Python" },
+      { name: "Docker" },
+      { name: "PostgreSQL" },
+      { name: "Cron" },
+      { name: "FMP APIs" },
+    ],
+    image: "/assets/backendproject.png",
+    live: "",
+    github: "https://github.com/ewanchukwilliam/APItrackinghistory",
+  },
+  {
+    num: "03",
     category: "fullstack",
-    title: "project 1",
+    title: "Job Application Tracker",
     description: "Developed a Job Application Tracker using React, Express, Sequelize, MySQL, Tailwind CSS, and CORS for secure HTTPS requests and database management. Tracks stats, exports to excel, and uses standard REST requests",
     stack: [
       { name: "Html 5" },
@@ -38,9 +71,9 @@ const projects = [
     github: "http://github.com/ewanchukwilliam/jobhunting",
   },
   {
-    num: "02",
+    num: "04",
     category: "frontend",
-    title: "project 2",
+    title: "Chess Learning Website",
     description:" a responsive website with HTML, CSS, and JavaScript for practicing and learning chess. Implemented interactive features to enhance user engagement and improve usability.",
     stack: [
       { name: "Html 5" },
@@ -51,20 +84,6 @@ const projects = [
     image: "/assets/chess.JPG",
     live: "",
     github: "https://github.com/ewanchukwilliam/portfolio",
-  },
-  {
-    num: "03",
-    category: "Embedded",
-    title: "project 3",
-    description:"Designed and soldered a wireless Nice!nano Corne keyboard, integrating RGB lighting and custom firmware. Programmed microcontroller firmware for wireless bluetooth communication and optimizing for battery power management, and gained experience with embedded systems testing. Involved additional 3D printing for case design for the pcb/battery placement and required additional safety features (disconnects and additional battery undervolt/overvolt protection circuit management and testing).",
-    stack: [
-      { name: "Nice!nano" },
-      { name: "ZMK software" },
-      { name: "Corne PCB" },
-    ],
-    image: "/assets/keyboard.jpg",
-    live: "",
-    github: "https://github.com/ewanchukwilliam/willys-config",
   },
 ];
 
@@ -95,12 +114,12 @@ const Work = () => {
               </div>
               {/* project Catagory */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+				{project.category === "internship" ? "10-Month Internship" : `${project.category} project`}
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
                     <li className="text-xl text-accent" key={index}>
@@ -116,6 +135,7 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project buttons */}
+				{project.live === "" ? null : (
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -126,6 +146,8 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
+				)}
+				{project.github === "" ? null : (
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -136,10 +158,11 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
+				)}
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[50%] h-auto">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}

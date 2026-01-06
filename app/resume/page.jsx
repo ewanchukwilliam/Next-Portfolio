@@ -12,13 +12,8 @@ import {
 	SiReact,
 	SiNodedotjs,
 	SiDocker,
-	SiAssemblyscript,
 	SiArduino,
 	SiRaspberrypi,
-	SiMicrosoftexcel,
-	SiMicrosoftpowerpoint,
-	SiMicrosoftword,
-	SiGoogledocs,
 	SiHtml5,
 	SiCss3,
 	SiJavascript,
@@ -28,7 +23,7 @@ import {
 const about = {
 	title: "About me",
 	description:
-		"William Ewanchuk, a Bachelor of Science in Computer Engineering student at the University of Alberta, combines proficiency in web development technologies like HTML, CSS, React, Node.js, and JavaScript with hands-on experience in software development methodologies and version control.",
+		"Computer Engineering Co-op student at the University of Alberta with hands-on experience in full-stack development, cloud infrastructure, and LLM-powered applications. Completed a 10-month internship at Stepscale.ai building scalable backend systems and AI integrations.",
 	info: [
 		{
 			fieldName: "Name",
@@ -39,12 +34,12 @@ const about = {
 			fieldValue: "(+1) 780 288 7365",
 		},
 		{
-			fieldName: "Experience",
-			fieldValue: "0 years",
+			fieldName: "Location",
+			fieldValue: "Edmonton, AB",
 		},
 		{
-			fieldName: "Skype",
-			fieldValue: "william.01",
+			fieldName: "GPA",
+			fieldValue: "3.0",
 		},
 		{
 			fieldName: "Nationality",
@@ -59,8 +54,8 @@ const about = {
 			fieldValue: "wewanchu@ualberta.ca",
 		},
 		{
-			fieldName: "Lanuages",
-			fieldValue: "English",
+			fieldName: "Portfolio",
+			fieldValue: "ewanchukwilliam.com",
 		},
 	],
 };
@@ -70,12 +65,17 @@ const experience = {
 	icon: "assets/resume/badge.svg",
 	title: "My experience",
 	description:
-		"Managed server replacements at Starbucks, ensuring smooth operations through remote coordination and meticulous documentation, enhancing web development and IT infrastructure skills.",
+		"Full-stack developer with 10 months of internship experience building LLM-powered applications, payment integrations, and cloud infrastructure. Background in server infrastructure and emergency medical response.",
 	items: [
 		{
-			company: "Starbucks",
-			position: "Server Technician Remote",
-			duration: "June 2024 - Present",
+			company: "Stepscale.ai",
+			position: "Software Engineer: Full-Stack Developer",
+			duration: "November 2024 - August 2025",
+		},
+		{
+			company: "Recon Audio Visual",
+			position: "Server Technician",
+			duration: "June 2024 - July 2024",
 		},
 		{
 			company: "Bravo Target Safety",
@@ -90,15 +90,20 @@ const education = {
 	icon: "assets/resume/badge.svg",
 	title: "My education",
 	description:
-		"I'm pursuing a Computer Engineering degree and have certifications in Emergency Response and Full Stack Development, combining technical knowledge with hands-on web development experience.",
+		"Computer Engineering Co-op student with a 3.0 GPA. AWS Certified Cloud Practitioner (in progress). Work term availability: April 20th, 2026.",
 	items: [
 		{
 			insitution: "University of Alberta",
-			degree: "Bachelors of Computer Engineering Co-op",
-			duration: "2021-present",
+			degree: "Computer Engineering Co-op",
+			duration: "2021 - Present (GPA: 3.0)",
 		},
 		{
-			insitution: "Western Insitute of Emergency Education",
+			insitution: "AWS Certification",
+			degree: "AWS Certified Cloud Practitioner",
+			duration: "In Progress",
+		},
+		{
+			insitution: "Western Institute of Emergency Education",
 			degree: "Emergency Medical Responder",
 			duration: "2021",
 		},
@@ -107,11 +112,6 @@ const education = {
 			degree: "Front-end Track",
 			duration: "2023",
 		},
-		{
-			insitution: "Online Course",
-			degree: "Full Stack Developer",
-			duration: "2024",
-		},
 	],
 };
 
@@ -119,7 +119,7 @@ const education = {
 const skills = {
 	title: "My skills",
 	description:
-		"I am proficient in various programming languages, including Bash script, Python, JavaScript, HTML, CSS, C, C++, Cmake, Makefiles, SQL, Matlab, and Assembly. He has experience with embedded systems, utilizing microcontrollers such as STM32, Arduino, and Raspberry Pi for server-related home projects. Additionally, he is skilled in software development methodologies, version control, web development, and data analysis using Microsoft Office Suite and Google Docs for project management and presentation. ",
+		"DevOps-focused developer experienced with AWS infrastructure (EC2, EBS, CloudWatch, Elastic Beanstalk), containerization (Docker, Docker Compose), and CI/CD pipelines (GitHub Actions). Proficient in Linux/UNIX systems, Nginx reverse proxies, and deployment automation. Strong full-stack foundation with Python, JavaScript/TypeScript, React, Next.js, Django, and PostgreSQL.",
 	skillList: [
 {
       icon: <SiHtml5 />,
@@ -178,10 +178,6 @@ const skills = {
       name: "Docker",
     },
     {
-      icon: <SiAssemblyscript />,
-      name: "Assembly",
-    },
-    {
       icon: <SiArduino />,
       name: "Arduino",
     },
@@ -189,22 +185,30 @@ const skills = {
       icon: <SiRaspberrypi />,
       name: "Raspberry Pi",
     },
-    {
-      icon: <SiMicrosoftexcel />,
-      name: "Microsoft Excel",
-    },
-    {
-      icon: <SiMicrosoftpowerpoint />,
-      name: "Microsoft PowerPoint",
-    },
-    {
-      icon: <SiMicrosoftword />,
-      name: "Microsoft Word",
-    },
-    {
-      icon: <SiGoogledocs />,
-      name: "Google Docs",
-    },
+	],
+};
+
+// scholarships data
+const scholarships = {
+	title: "Scholarships & Awards",
+	description:
+		"Recognized for academic excellence with $7,600 in scholarships including the Faculty of Engineering Iron Standard Entrance Scholarship.",
+	items: [
+		{
+			name: "Faculty of Engineering Iron Standard Entrance Scholarship",
+			amount: "$5,000",
+			year: "2021",
+		},
+		{
+			name: "Walter and Edith (Hughes) Fryers Undergraduate Scholarship",
+			amount: "$1,300",
+			year: "2022",
+		},
+		{
+			name: "Alex Rutherford Scholarship",
+			amount: "$1,300",
+			year: "2021",
+		},
 	],
 };
 
@@ -239,6 +243,7 @@ const Resume = () => {
 						<TabsTrigger value="experience">Experience</TabsTrigger>
 						<TabsTrigger value="education">Education</TabsTrigger>
 						<TabsTrigger value="skills">Skills</TabsTrigger>
+						<TabsTrigger value="scholarships">Awards</TabsTrigger>
 						<TabsTrigger value="about">About me</TabsTrigger>
 					</TabsList>
 					{/* content */}
@@ -338,6 +343,34 @@ const Resume = () => {
 								</ul>
 							</div>
 						</TabsContent>
+						{/* scholarships */}
+						<TabsContent value="scholarships" className="w-full">
+							<div className="flex flex-col gap-[30px] text-center xl:text-left">
+								<h3 className="text-4xl font-bold ">{scholarships.title}</h3>
+								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+									{scholarships.description}
+								</p>
+								<ScrollArea className="h-[300px]">
+									<ul className="grid grid-col-1 lg:grid-cols-2 gap-[30px]">
+										{scholarships.items.map((item, index) => {
+											return (
+												<li
+													key={index}
+													className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+												>
+													<div className="flex items-center gap-3">
+														<p className="text-2xl font-semibold text-accent">{item.amount}</p>
+														<span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+														<p className="text-white/60">{item.year}</p>
+													</div>
+													<span className="">{item.name}</span>
+												</li>
+											);
+										})}
+									</ul>
+								</ScrollArea>
+							</div>
+						</TabsContent>
 						{/* about */}
 						<TabsContent
 							value="about"
@@ -348,7 +381,7 @@ const Resume = () => {
 								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
 									{about.description}
 								</p>
-								<ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+								<ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 gap-x-12">
 									{about.info.map((item, index) => {
 										return (
 											<li
