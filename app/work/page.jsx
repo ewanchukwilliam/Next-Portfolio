@@ -29,9 +29,11 @@ const projects = [
       { name: "Django" },
       { name: "PostgreSQL" },
       { name: "Langraph" },
-      { name: "AWS" },
+      { name: "AWS EBS" },
       { name: "Docker" },
       { name: "Stripe" },
+	  { name: "PipeDream" },
+	
     ],
     image: "/assets/stepscale.png",
     live: "https://stepscale.ai/",
