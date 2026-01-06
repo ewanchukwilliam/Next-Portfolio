@@ -1,4 +1,4 @@
 .next/cache/
 node_modules/
-.next/*
+.next/
 
