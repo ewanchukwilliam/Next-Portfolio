@@ -66,7 +66,7 @@ const projects = [
       { name: "Mysql" },
       { name: "Javascript" },
     ],
-    image: "/assets/jobhunting.JPG",
+    image: "/assets/jobhunting.png",
     live: "",
     github: "http://github.com/ewanchukwilliam/jobhunting",
   },

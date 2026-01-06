@@ -12,10 +12,6 @@ const stats = [
     text: "Years of Experience",
   },
   {
-    num: 6,
-    text: "Projects Completed",
-  },
-  {
     num: 90,
     text: "Leetcode Questions Solved",
   },
