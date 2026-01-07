@@ -6,7 +6,7 @@ import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <section className="h-full">
+    <section className="h-screen">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
@@ -22,16 +22,17 @@ const Home = () => {
             </p>
             {/**/}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="/Resume_Work_Term_3_software.pdf" download="William_Ewanchuk_Resume.pdf">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="uppercase flex items-center gap-2"
-                >
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+                asChild
+              >
+                <a href="/Resume_Work_Term_3_software.pdf" download="William_Ewanchuk_Resume.pdf">
                   <span>Download Resume</span>
                   <FiDownload className="text-xl" />
-                </Button>
-              </a>
+                </a>
+              </Button>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"

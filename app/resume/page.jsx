@@ -232,7 +232,7 @@ const Resume = () => {
 				opacity: 1,
 				transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
 			}}
-			className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+			className="min-h-[100vh] flex items-center justify-center py-12 xl:py-0"
 		>
 			<div className="container mx-auto">
 				<Tabs
@@ -247,7 +247,7 @@ const Resume = () => {
 						<TabsTrigger value="about">About me</TabsTrigger>
 					</TabsList>
 					{/* content */}
-					<div className="h-[70vh] w-full">
+					<div className="min-h-[70vh] w-full">
 						{/* experience */}
 						<TabsContent value="experience" className="w-full">
 							<div className="flex flex-col gap-[30px] text-center xl:text-left">
