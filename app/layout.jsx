@@ -19,11 +19,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="overflow-y-hidden">
-      <body className={`${jetbrainsMono.variable} min-h-screen`}>
+    <html lang="en">
+      <body className={`${jetbrainsMono.variable}`}>
         <Header />
-        <StairTransition />
-        <PageTransition> {children} </PageTransition>
+        <main className="pt-24 xl:pt-28 min-h-screen overflow-y-auto">
+          <StairTransition />
+          <PageTransition> {children} </PageTransition>
+        </main>
       </body>
     </html>
   );
