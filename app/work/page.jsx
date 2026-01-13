@@ -157,7 +157,7 @@ const Work = () => {
 						<BsArrowUpRight className="text-white text-3xl" />
 						</TooltipTrigger>
 						<TooltipContent>
-						AVAILABLE UPON REQUEST
+						AVAILABLE UPON REQUEST (20 min spinup)
 						</TooltipContent>
 					</Tooltip>
 					</TooltipProvider>
