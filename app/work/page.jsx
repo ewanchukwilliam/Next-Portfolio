@@ -59,7 +59,7 @@ const projects = [
 	  { name: "K6 Load Testing" },
     ],
     image: "/assets/kubernetes.png",
-    live: "",
+    live: "https://api.codeseeker.dev/page",
     github: "https://github.com/ewanchukwilliam/devopshealthcheckk8testing",
   },
   {
@@ -146,16 +146,36 @@ const Work = () => {
               <div className="flex items-center gap-4">
                 {/* live project buttons */}
 				{project.live === "" ? null : (
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>Live Project</TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+				project.category === "Devops" ? (
+					// Disabled state (no Link, just UI)
+					<TooltipProvider delayDuration={100}>
+					<Tooltip>
+						<TooltipTrigger
+						className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group opacity-40 cursor-not-allowed"
+						aria-disabled="true"
+						>
+						<BsArrowUpRight className="text-white text-3xl" />
+						</TooltipTrigger>
+						<TooltipContent>
+						AVAILABLE UPON REQUEST
+						</TooltipContent>
+					</Tooltip>
+					</TooltipProvider>
+				) : (
+					// Normal clickable link
+					<Link href={project.live} target="_blank" rel="noreferrer">
+					<TooltipProvider delayDuration={100}>
+						<Tooltip>
+						<TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+							<BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+						</TooltipTrigger>
+						<TooltipContent>
+							{project.live}
+						</TooltipContent>
+						</Tooltip>
+					</TooltipProvider>
+					</Link>
+				)
 				)}
 				{project.github === "" ? null : (
                 <Link href={project.github}>
