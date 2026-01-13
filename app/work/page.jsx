@@ -43,7 +43,7 @@ const projects = [
     num: "02",
     category: "Devops",
     title: "Kubernetes Benchmarking Tool AWS EKS deployable",
-    description: "Developed EKS deployable Kubernetes benchmarking tool for pods on t3.small containers. this service mimics a multi-node cluster that collects/reports pod information to a shared redis database. This information can be accessed by any pod to view all cluster information. It's capable of supporting up to 500 concurrent connections and 10,000 rps and scales between 1-10 pods without losing any requests and auto signs TLS certificates with a cert-manager",
+    description: "Developed EKS deployable Kubernetes benchmarking tool for pods on t3.small containers. this service deploys a multi-node cluster that collects/reports pod information to a shared redis database. This information can be accessed by any pod to view all cluster information. It's capable of supporting up to 500 concurrent connections and 8,000 rps and horizontally scales between 1-10 pods based on CPU utilization. decrypts SSL/TLS using Lets Encrypt.",
     stack: [
       { name: "AWS EKS" },
       { name: "Docker" },
