@@ -82,18 +82,19 @@ const projects = [
   },
   {
     num: "04",
-    category: "frontend",
-    title: "Chess Learning Website",
-    description:" a responsive website with HTML, CSS, and JavaScript for practicing and learning chess. Implemented interactive features to enhance user engagement and improve usability.",
+    category: "backend",
+    title: "Insider Trading Tracker: Back-End Developer",
+    description: "Built automated Python ETL pipeline tracking congressional insider trades via hourly cron jobs, aggregating data from 3 financial APIs. Implemented error logging and database monitoring for API performance tracking. Generated plots comparing trade dates with historical options data, deployed via Docker.",
     stack: [
-      { name: "Html 5" },
-      { name: "Next.js" },
-      { name: "Tailwindcss" },
-      { name: "Node.Js" },
+      { name: "Python" },
+      { name: "Docker" },
+      { name: "PostgreSQL" },
+      { name: "Cron" },
+      { name: "FMP APIs" },
     ],
-    image: "/assets/chess.JPG",
+    image: "/assets/backendproject.png",
     live: "",
-    github: "https://github.com/ewanchukwilliam/portfolio",
+    github: "https://github.com/ewanchukwilliam/APItrackinghistory",
   },
 ];
 
