@@ -56,6 +56,7 @@ const projects = [
 	  { name: "FastAPI" },
 	  { name: "Lets Encrypt" },
 	  { name: "Route53" },
+	  { name: "Eksctl" },
     ],
     image: "/assets/kubernetes.png",
     live: "",
