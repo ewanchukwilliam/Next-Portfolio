@@ -16,13 +16,13 @@ const stats = [
     text: "Leetcode Questions Solved",
   },
   {
-    num: 9,
-    text: "Blog Posts Written",
-  },
-  {
     num: 1000,
     suffix: "+",
     text: "Code Commits",
+  },
+  {
+    num: 9,
+    text: "Blog Posts Written",
   },
   {
     num: 40,
