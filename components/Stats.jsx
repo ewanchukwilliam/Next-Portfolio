@@ -24,6 +24,11 @@ const stats = [
     suffix: "+",
     text: "Code Commits",
   },
+  {
+    num: 40,
+    suffix: "+",
+    text: "Technologies Used",
+  },
 ];
 
 const Stats = () => {

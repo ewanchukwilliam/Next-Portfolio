@@ -48,7 +48,7 @@ const info = [
   },
 ];
 
-const services = [
+const areas = [
   "Backend & API Development",
   "DevOps & Cloud Infrastructure",
   "CI/CD & Observability",
@@ -63,12 +63,12 @@ const handleSubmit = (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.currentTarget));
   const name = `${data.firstname ?? ""} ${data.lastname ?? ""}`.trim();
-  const subject = `Portfolio inquiry${data.service ? `: ${data.service}` : ""}${name ? ` from ${name}` : ""}`;
+  const subject = `Portfolio inquiry${data.area ? `: ${data.area}` : ""}${name ? ` from ${name}` : ""}`;
   const body = [
     `Name: ${name || "-"}`,
     `Email: ${data.email || "-"}`,
     `Phone: ${data.phone || "-"}`,
-    `Service: ${data.service || "-"}`,
+    `Area: ${data.area || "-"}`,
     "",
     data.message ?? "",
   ].join("\n");
@@ -106,16 +106,16 @@ const Contact = () => {
                 <Input type="tel" name="phone" placeholder="Phone number" autoComplete="tel" />
               </div>
               {/* select */}
-              <Select name="service">
+              <Select name="area">
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="What are you looking for?" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a Service</SelectLabel>
-                    {services.map((service) => (
-                      <SelectItem key={service} value={service}>
-                        {service}
+                    <SelectLabel>Area of expertise</SelectLabel>
+                    {areas.map((area) => (
+                      <SelectItem key={area} value={area}>
+                        {area}
                       </SelectItem>
                     ))}
                   </SelectGroup>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowDownRight } from "react-icons/bs";
-const services = [
+const areas = [
   {
     num: "01",
     title: "Backend & API Development",
@@ -33,7 +33,7 @@ const services = [
     href: "/work",
   },
 ];
-const Services = () => {
+const Expertise = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
@@ -45,7 +45,7 @@ const Services = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
-          {services.map((service, index) => {
+          {areas.map((area, index) => {
             return (
               <div
                 className="flex-1 flex flex-col justify-start gap-6 group"
@@ -57,18 +57,18 @@ const Services = () => {
                     className="text-5xl font-extrabold text-outline group-hover:text-outline-hover text-transparent transition-all duration-500"
                     key={index}
                   >
-                    {service.num}
+                    {area.num}
                   </div>
-                  <Link href={service.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
+                  <Link href={area.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                     <BsArrowDownRight className=" text-primary text-3xl"/>
                   </Link>
                 </div>
 
                 {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500" key={index}>{service.title}</h2>
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500" key={index}>{area.title}</h2>
 
                 {/* description */}
-                <p className="text-white/60" key={index}>{service.description}</p>
+                <p className="text-white/60" key={index}>{area.description}</p>
 
                 {/* border */}
                 <div className="border-b border-white/20 w-full"></div>
@@ -81,4 +81,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Expertise;
