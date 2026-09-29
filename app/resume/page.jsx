@@ -84,7 +84,7 @@ const experience = {
 		"Two internships. Currently building release pipelines and Azure infrastructure for WorX at NACG. Previously built Django backends and LLM tooling at Stepscale.ai. Background in server infrastructure and emergency medical response.",
 	items: [
 		{
-			company: "North American Construction Group",
+			company: "NACG",
 			position: "Full Stack Developer/DevOps",
 			duration: "April 2026 to Present",
 		},
