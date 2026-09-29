@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "William Ewanchuk | Backend & DevOps Developer",
   description:
-    "Portfolio of William Ewanchuk – Backend & DevOps developer and University of Alberta Computer Engineering Co-op student.",
+    "William Ewanchuk, backend and DevOps developer and Computer Engineering Co-op student at the University of Alberta.",
 };
 
 export default function RootLayout({ children }) {

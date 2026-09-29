@@ -1,16 +1,12 @@
 "use client";
 
 import {
-	SiNextdotjs,
-	SiExpress,
 	SiMysql,
 	SiPython,
 	SiC,
 	SiCplusplus,
 	SiReact,
-	SiNodedotjs,
 	SiDocker,
-	SiJavascript,
 	SiTypescript,
 	SiOpenjdk,
 	SiDotnet,
@@ -47,7 +43,7 @@ import { TbBrandCSharp, TbSql } from "react-icons/tb";
 const about = {
 	title: "About me",
 	description:
-		"Computer Engineering Co-op student at the University of Alberta focused on backend development, DevOps, and cloud infrastructure, with React experience for the frontends that sit on top. Currently a Full Stack Developer/DevOps co-op at North American Construction Group, after a 10-month internship at Stepscale.ai building backend systems and AI integrations.",
+		"Computer Engineering Co-op student at the University of Alberta, focused on backend and DevOps. Currently a co-op at North American Construction Group after a 10-month internship at Stepscale.ai.",
 	info: [
 		{
 			fieldName: "Name",
@@ -85,27 +81,27 @@ const experience = {
 	icon: "assets/resume/badge.svg",
 	title: "My experience",
 	description:
-		"Backend and DevOps developer with two internships: currently building .NET services, release pipelines, and Azure infrastructure for North American Construction Group, and previously 10 months at Stepscale.ai building Django backends, LLM tooling, payment integrations, and AWS deployments. Background in server infrastructure and emergency medical response.",
+		"Two internships. Currently building release pipelines and Azure infrastructure for WorX at NACG. Previously built Django backends and LLM tooling at Stepscale.ai. Background in server infrastructure and emergency medical response.",
 	items: [
 		{
 			company: "North American Construction Group",
 			position: "Full Stack Developer/DevOps",
-			duration: "April 2026 - Present",
+			duration: "April 2026 to Present",
 		},
 		{
 			company: "Stepscale.ai",
 			position: "Software Engineering Intern",
-			duration: "November 2024 - August 2025",
+			duration: "November 2024 to August 2025",
 		},
 		{
 			company: "Recon Audio Visual",
 			position: "Server Technician",
-			duration: "June 2024 - July 2024",
+			duration: "June 2024 to July 2024",
 		},
 		{
 			company: "Bravo Target Safety",
 			position: "Emergency Medical Responder",
-			duration: "June 2021 - Present",
+			duration: "June 2021 to Present",
 		},
 	],
 };
@@ -120,7 +116,7 @@ const education = {
 		{
 			insitution: "University of Alberta",
 			degree: "B.Sc. Computer Engineering Co-op",
-			duration: "2021 - May 2027 (Expected)",
+			duration: "2021 to May 2027 (expected)",
 		},
 		{
 			insitution: "Western Institute of Emergency Education",
@@ -134,14 +130,14 @@ const education = {
 const skills = {
 	title: "My skills",
 	description:
-		"Backend and DevOps developer building services in .NET, Spring Boot, Django, and FastAPI on PostgreSQL and Redis. Experienced shipping to Azure (Container Apps, ACR, Blob Storage) and AWS (EKS, EC2, S3, RDS, CloudWatch) with Docker, Kubernetes, KEDA, Helm, Terraform, and Ansible, running CI/CD through Azure DevOps, GitHub Actions, and GitLab CI, and monitoring with OpenTelemetry, Application Insights, Prometheus, and Grafana. Comfortable building React and Next.js frontends when a project needs one.",
+		"Backend and DevOps developer working in Spring Boot, .NET, Django, and FastAPI. I ship to Azure and AWS with Docker, Kubernetes, and Terraform, and monitor with OpenTelemetry, Prometheus, and Grafana.",
 	skillList: [
 		// core backend and devops
-		{ icon: <SiPython />, name: "Python" },
-		{ icon: <TbBrandCSharp />, name: "C#" },
-		{ icon: <SiDotnet />, name: ".NET" },
 		{ icon: <SiOpenjdk />, name: "Java" },
 		{ icon: <SiSpringboot />, name: "Spring Boot" },
+		{ icon: <TbBrandCSharp />, name: "C#" },
+		{ icon: <SiDotnet />, name: ".NET" },
+		{ icon: <SiPython />, name: "Python" },
 		{ icon: <SiDjango />, name: "Django" },
 		{ icon: <SiFastapi />, name: "FastAPI" },
 		{ icon: <SiDocker />, name: "Docker" },
@@ -166,10 +162,8 @@ const skills = {
 		{ icon: <SiOpentelemetry />, name: "OpenTelemetry" },
 		{ icon: <SiPrometheus />, name: "Prometheus" },
 		{ icon: <SiGrafana />, name: "Grafana" },
-		// other backend tools
+		// other tools
 		{ icon: <SiTypescript />, name: "TypeScript" },
-		{ icon: <SiNodedotjs />, name: "Node.js" },
-		{ icon: <SiExpress />, name: "Express.js" },
 		{ icon: <SiSqlite />, name: "SQLite" },
 		{ icon: <SiMysql />, name: "MySQL" },
 		{ icon: <SiMongodb />, name: "MongoDB" },
@@ -177,9 +171,7 @@ const skills = {
 		{ icon: <SiGit />, name: "Git" },
 		{ icon: <SiNeovim />, name: "Vim / Neovim" },
 		// frontend
-		{ icon: <SiReact />, name: "React.js" },
-		{ icon: <SiNextdotjs />, name: "Next.js" },
-		{ icon: <SiJavascript />, name: "JavaScript" },
+		{ icon: <SiReact />, name: "React / React Native" },
 		// embedded
 		{ icon: <SiC />, name: "C" },
 		{ icon: <SiCplusplus />, name: "C++" },
@@ -190,7 +182,7 @@ const skills = {
 const scholarships = {
 	title: "Scholarships & Awards",
 	description:
-		"Recognized for academic excellence with $7,600 in scholarships including the Faculty of Engineering Iron Standard Entrance Scholarship.",
+		"$7,600 in scholarships for academic excellence.",
 	items: [
 		{
 			name: "Faculty of Engineering Iron Standard Entrance Scholarship",

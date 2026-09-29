@@ -6,30 +6,26 @@ import { BsArrowDownRight } from "react-icons/bs";
 const areas = [
   {
     num: "01",
-    title: "Backend & API Development",
-    description:
-      "I design and build APIs and backend services with .NET, Spring Boot, Django, and FastAPI on PostgreSQL, SQLite, and Redis. I've owned features end-to-end – Azure Blob storage with user-delegation SAS tokens, Stripe and Shippo webhook-driven order lifecycles, database-backed auth sessions, Redis caching layers, and sandboxed LangGraph agents.",
+    title: "Backend and API Development",
+    description: "I enjoy designing my backend applications in object-oriented languages. I prefer to build backends to be easy to maintain, with only the abstractions they need, and prefer interfaces over inheritance. I enforce business invariants through domain-driven design (DDD).",
     href: "/work",
   },
   {
     num: "02",
-    title: "DevOps & Cloud Infrastructure",
-    description:
-      "I deploy and scale services on Azure (Container Apps, ACR, Blob Storage) and AWS (EKS, EC2, S3, RDS) with Docker, Kubernetes, KEDA, and Helm. Infrastructure is provisioned as code with Terraform and Ansible – from traffic-driven autoscaling on EKS to self-hosted Proxmox servers behind Tailscale and Cloudflare.",
+    title: "DevOps and Cloud Infrastructure",
+    description: "I run applications both self-hosted and in the cloud. I design them to be stateless and redundant, so any instance can fail or be replaced without downtime. When something needs to scale, I use Kubernetes with KEDA. When it doesn't, Docker Compose keeps it simple. In my spare time I spin up clusters on AWS and load test them with k6, comparing providers, autoscalers, ingress controllers, and control plane setups.",
     href: "/work",
   },
   {
     num: "03",
-    title: "CI/CD & Observability",
-    description:
-      "I build release pipelines in Azure DevOps, GitHub Actions, and GitLab CI – containerized builds with cached dependencies (80% faster), database migrations, and blue/green zero-downtime deployments. I instrument systems with OpenTelemetry, Application Insights, Prometheus, and Grafana so issues are visible before users report them.",
+    title: "CI/CD and Observability",
+    description: "I design pipelines that cleanly separate application development from infrastructure management. The cleaner the design, the less day to day friction for everyone. For observability I use OpenTelemetry for traces, Prometheus for metrics, and Grafana for dashboards.",
     href: "/work",
   },
   {
     num: "04",
     title: "Full Stack Development",
-    description:
-      "When a project needs a frontend, I build it in React and Next.js with TypeScript on top of the backends I design – from internal field-maintenance tools to an e-commerce checkout – keeping the UI thin and the business logic on the server.",
+    description: "I build frontends in React and React Native with TypeScript. I keep business rules on the server so the UI stays simple and easy to change. I use TanStack for data fetching and caching instead of rolling my own, and design mobile apps to keep working offline.",
     href: "/work",
   },
 ];

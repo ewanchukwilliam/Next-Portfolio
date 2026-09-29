@@ -17,12 +17,8 @@ const Home = () => {
               <span className="text-accent">William Ewanchuk</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Computer Engineering Co-op student at the University of Alberta.
-              Currently building .NET services, release pipelines, and Azure
-              infrastructure at North American Construction Group, after a
-              10-month internship at Stepscale.ai building Django backends and
-              LLM tooling on AWS.
-            </p>
+I’m a Computer Engineering Co-op student at the University of Alberta graduating in May 2027, with experience building and operating production backend, web, and cloud systems.
+I’m most interested in backend and platform engineering, particularly distributed systems, cloud infrastructure, and reliability. Outside of work, I build with Java, Spring Boot, Kubernetes, and AWS.            </p>
             {/**/}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
@@ -31,7 +27,7 @@ const Home = () => {
                 className="uppercase flex items-center gap-2"
                 asChild
               >
-                <a href="/resume-11.pdf" download="William_Ewanchuk_Resume.pdf">
+                <a href="/resume.pdf" download="William_Ewanchuk_Resume.pdf">
                   <span>Download Resume</span>
                   <FiDownload className="text-xl" />
                 </a>
