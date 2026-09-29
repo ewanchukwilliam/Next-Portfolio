@@ -94,14 +94,14 @@ const experience = {
 			duration: "November 2024 to August 2025",
 		},
 		{
+			company: "LittleBrick3dPrinting",
+			position: "Software Developer",
+			duration: "June 2025 to Present",
+		},
+		{
 			company: "Recon Audio Visual",
 			position: "Server Technician",
 			duration: "June 2024 to July 2024",
-		},
-		{
-			company: "Bravo Target Safety",
-			position: "Emergency Medical Responder",
-			duration: "June 2021 to Present",
 		},
 	],
 };
