@@ -11,13 +11,27 @@ module.exports = {
 	theme: {
 		container: {
 			center: true,
-			padding: "15px",
+			padding: {
+				DEFAULT: "15px",
+				"2xl": "32px",
+			},
+			// max-widths; widens past xl so large monitors aren't a narrow strip
+			screens: {
+				sm: "640px",
+				md: "768px",
+				lg: "960px",
+				xl: "1200px",
+				"2xl": "1440px",
+				"3xl": "1760px",
+			},
 		},
 		screens: {
 			sm: "640px",
 			md: "768px",
 			lg: "960px",
 			xl: "1200px",
+			"2xl": "1440px",
+			"3xl": "1760px",
 		},
 		fontFamily: {
 			primary: "var(--font-jetbrainsMono)",

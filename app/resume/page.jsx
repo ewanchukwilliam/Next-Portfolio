@@ -1,8 +1,6 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import {
-	SiTailwindcss,
 	SiNextdotjs,
 	SiExpress,
 	SiMysql,
@@ -12,18 +10,42 @@ import {
 	SiReact,
 	SiNodedotjs,
 	SiDocker,
-	SiArduino,
-	SiRaspberrypi,
-	SiHtml5,
-	SiCss3,
 	SiJavascript,
+	SiTypescript,
+	SiOpenjdk,
+	SiDotnet,
+	SiGnubash,
+	SiDjango,
+	SiSpringboot,
+	SiFastapi,
+	SiPostgresql,
+	SiSqlite,
+	SiMongodb,
+	SiRedis,
+	SiKubernetes,
+	SiHelm,
+	SiTerraform,
+	SiAnsible,
+	SiNginx,
+	SiCloudflare,
+	SiLinux,
+	SiAmazonaws,
+	SiMicrosoftazure,
+	SiAzuredevops,
+	SiGithubactions,
+	SiGitlab,
+	SiGrafana,
+	SiPrometheus,
+	SiOpentelemetry,
+	SiJunit5,
 	SiGit,
 } from "react-icons/si";
+import { TbBrandCSharp, TbSql } from "react-icons/tb";
 
 const about = {
 	title: "About me",
 	description:
-		"Computer Engineering Co-op student at the University of Alberta with hands-on experience in full-stack development, cloud infrastructure, and LLM-powered applications. Completed a 10-month internship at Stepscale.ai building scalable backend systems and AI integrations.",
+		"Computer Engineering Co-op student at the University of Alberta focused on backend development, DevOps, and cloud infrastructure, with React experience for the frontends that sit on top. Currently a Full Stack Developer/DevOps co-op at North American Construction Group, after a 10-month internship at Stepscale.ai building backend systems and AI integrations.",
 	info: [
 		{
 			fieldName: "Name",
@@ -38,14 +60,6 @@ const about = {
 			fieldValue: "Edmonton, AB",
 		},
 		{
-			fieldName: "GPA",
-			fieldValue: "3.0",
-		},
-		{
-			fieldName: "Nationality",
-			fieldValue: "Canadian",
-		},
-		{
 			fieldName: "Email",
 			fieldValue: "ewanchukwilliam@gmail.com",
 		},
@@ -55,6 +69,10 @@ const about = {
 		},
 		{
 			fieldName: "Portfolio",
+			fieldValue: "williamewanchukportfolio.ca",
+		},
+		{
+			fieldName: "Blog",
 			fieldValue: "ewanchukwilliam.com",
 		},
 	],
@@ -65,11 +83,16 @@ const experience = {
 	icon: "assets/resume/badge.svg",
 	title: "My experience",
 	description:
-		"Full-stack developer with 10 months of internship experience building LLM-powered applications, payment integrations, and cloud infrastructure. Background in server infrastructure and emergency medical response.",
+		"Backend and DevOps developer with two internships: currently building .NET services, release pipelines, and Azure infrastructure for North American Construction Group, and previously 10 months at Stepscale.ai building Django backends, LLM tooling, payment integrations, and AWS deployments. Background in server infrastructure and emergency medical response.",
 	items: [
 		{
+			company: "North American Construction Group",
+			position: "Full Stack Developer/DevOps",
+			duration: "April 2026 - Present",
+		},
+		{
 			company: "Stepscale.ai",
-			position: "Software Engineer: Full-Stack Developer",
+			position: "Software Engineering Intern",
 			duration: "November 2024 - August 2025",
 		},
 		{
@@ -90,27 +113,17 @@ const education = {
 	icon: "assets/resume/badge.svg",
 	title: "My education",
 	description:
-		"Computer Engineering Co-op student with a 3.0 GPA. AWS Certified Cloud Practitioner (in progress). Work term availability: April 20th, 2026.",
+		"B.Sc. Computer Engineering Co-op student at the University of Alberta, expected to graduate May 2027.",
 	items: [
 		{
 			insitution: "University of Alberta",
-			degree: "Computer Engineering Co-op",
-			duration: "2021 - Present (GPA: 3.0)",
-		},
-		{
-			insitution: "AWS Certification",
-			degree: "AWS Certified Cloud Practitioner",
-			duration: "In Progress",
+			degree: "B.Sc. Computer Engineering Co-op",
+			duration: "2021 - May 2027 (Expected)",
 		},
 		{
 			insitution: "Western Institute of Emergency Education",
 			degree: "Emergency Medical Responder",
 			duration: "2021",
-		},
-		{
-			insitution: "CodeAcademy",
-			degree: "Front-end Track",
-			duration: "2023",
 		},
 	],
 };
@@ -119,72 +132,53 @@ const education = {
 const skills = {
 	title: "My skills",
 	description:
-		"DevOps-focused developer experienced with AWS infrastructure (EC2, EBS, CloudWatch, Elastic Beanstalk), containerization (Docker, Docker Compose), and CI/CD pipelines (GitHub Actions). Proficient in Linux/UNIX systems, Nginx reverse proxies, and deployment automation. Strong full-stack foundation with Python, JavaScript/TypeScript, React, Next.js, Django, and PostgreSQL.",
+		"Backend and DevOps developer building services in .NET, Spring Boot, Django, and FastAPI on PostgreSQL and Redis. Experienced shipping to Azure (Container Apps, ACR, Blob Storage) and AWS (EKS, EC2, S3, RDS, CloudWatch) with Docker, Kubernetes, KEDA, Helm, Terraform, and Ansible, running CI/CD through Azure DevOps, GitHub Actions, and GitLab CI, and monitoring with OpenTelemetry, Application Insights, Prometheus, and Grafana. Comfortable building React and Next.js frontends when a project needs one.",
 	skillList: [
-{
-      icon: <SiHtml5 />,
-      name: "HTML5",
-    },
-    {
-      icon: <SiCss3 />,
-      name: "CSS3",
-    },
-    {
-      icon: <SiJavascript />,
-      name: "JavaScript",
-    },
-    {
-      icon: <SiReact />,
-      name: "React.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "Next.js",
-    },
-    {
-      icon: <SiNodedotjs />,
-      name: "Node.js",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "Tailwind CSS",
-    },
-    {
-      icon: <SiExpress />,
-      name: "Express.js",
-    },
-    {
-      icon: <SiMysql />,
-      name: "MySQL",
-    },
-    {
-      icon: <SiPython />,
-      name: "Python",
-    },
-    {
-      icon: <SiC />,
-      name: "C",
-    },
-    {
-      icon: <SiCplusplus />,
-      name: "C++",
-    },
-    {
-      icon: <SiGit />,
-      name: "Git",
-    },
-    {
-      icon: <SiDocker />,
-      name: "Docker",
-    },
-    {
-      icon: <SiArduino />,
-      name: "Arduino",
-    },
-    {
-      icon: <SiRaspberrypi />,
-      name: "Raspberry Pi",
-    },
+		// backend languages and frameworks
+		{ icon: <SiPython />, name: "Python" },
+		{ icon: <TbBrandCSharp />, name: "C#" },
+		{ icon: <SiOpenjdk />, name: "Java" },
+		{ icon: <SiTypescript />, name: "TypeScript" },
+		{ icon: <TbSql />, name: "SQL" },
+		{ icon: <SiGnubash />, name: "Bash" },
+		{ icon: <SiC />, name: "C" },
+		{ icon: <SiCplusplus />, name: "C++" },
+		{ icon: <SiDotnet />, name: ".NET" },
+		{ icon: <SiSpringboot />, name: "Spring Boot" },
+		{ icon: <SiDjango />, name: "Django" },
+		{ icon: <SiFastapi />, name: "FastAPI" },
+		{ icon: <SiNodedotjs />, name: "Node.js" },
+		{ icon: <SiExpress />, name: "Express.js" },
+		// databases
+		{ icon: <SiPostgresql />, name: "PostgreSQL" },
+		{ icon: <SiRedis />, name: "Redis" },
+		{ icon: <SiSqlite />, name: "SQLite" },
+		{ icon: <SiMysql />, name: "MySQL" },
+		{ icon: <SiMongodb />, name: "MongoDB" },
+		// cloud and devops
+		{ icon: <SiMicrosoftazure />, name: "Azure" },
+		{ icon: <SiAmazonaws />, name: "AWS" },
+		{ icon: <SiDocker />, name: "Docker" },
+		{ icon: <SiKubernetes />, name: "Kubernetes / KEDA" },
+		{ icon: <SiHelm />, name: "Helm" },
+		{ icon: <SiTerraform />, name: "Terraform" },
+		{ icon: <SiAnsible />, name: "Ansible" },
+		{ icon: <SiNginx />, name: "Nginx" },
+		{ icon: <SiCloudflare />, name: "Cloudflare" },
+		{ icon: <SiLinux />, name: "Linux/Unix" },
+		// ci/cd and observability
+		{ icon: <SiGit />, name: "Git" },
+		{ icon: <SiAzuredevops />, name: "Azure DevOps" },
+		{ icon: <SiGithubactions />, name: "GitHub Actions" },
+		{ icon: <SiGitlab />, name: "GitLab CI" },
+		{ icon: <SiOpentelemetry />, name: "OpenTelemetry" },
+		{ icon: <SiPrometheus />, name: "Prometheus" },
+		{ icon: <SiGrafana />, name: "Grafana" },
+		{ icon: <SiJunit5 />, name: "JUnit" },
+		// frontend
+		{ icon: <SiReact />, name: "React.js" },
+		{ icon: <SiNextdotjs />, name: "Next.js" },
+		{ icon: <SiJavascript />, name: "JavaScript" },
 	],
 };
 
@@ -232,7 +226,7 @@ const Resume = () => {
 				opacity: 1,
 				transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
 			}}
-			className="min-h-[100vh] flex items-center justify-center py-12 xl:py-0"
+			className="py-12 xl:py-8"
 		>
 			<div className="container mx-auto">
 				<Tabs
@@ -247,7 +241,7 @@ const Resume = () => {
 						<TabsTrigger value="about">About me</TabsTrigger>
 					</TabsList>
 					{/* content */}
-					<div className="min-h-[70vh] w-full">
+					<div className="w-full">
 						{/* experience */}
 						<TabsContent value="experience" className="w-full">
 							<div className="flex flex-col gap-[30px] text-center xl:text-left">

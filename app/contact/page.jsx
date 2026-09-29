@@ -14,7 +14,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaBlog } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const info = [
@@ -30,10 +37,44 @@ const info = [
   },
   {
     icon: <FaMapMarkerAlt />,
-    title: "Address",
-    description: "10180 104th St Edmonton AB, Unit 1703, T5J 1A7",
+    title: "Location",
+    description: "Edmonton, AB",
+  },
+  {
+    icon: <FaBlog />,
+    title: "Blog",
+    description: "ewanchukwilliam.com",
+    href: "https://www.ewanchukwilliam.com",
   },
 ];
+
+const services = [
+  "Backend & API Development",
+  "DevOps & Cloud Infrastructure",
+  "CI/CD & Observability",
+  "Full Stack Development",
+];
+
+const EMAIL = "ewanchukwilliam@gmail.com";
+
+// no backend: builds a mailto: link from the form so the visitor's mail app
+// opens a pre-filled draft addressed to me
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.currentTarget));
+  const name = `${data.firstname ?? ""} ${data.lastname ?? ""}`.trim();
+  const subject = `Portfolio inquiry${data.service ? `: ${data.service}` : ""}${name ? ` from ${name}` : ""}`;
+  const body = [
+    `Name: ${name || "-"}`,
+    `Email: ${data.email || "-"}`,
+    `Phone: ${data.phone || "-"}`,
+    `Service: ${data.service || "-"}`,
+    "",
+    data.message ?? "",
+  ].join("\n");
+  window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
 const Contact = () => {
   return (
     <motion.section
@@ -47,50 +88,66 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
-          <div className="xl:w-[54%] order-2 xl:order-none">
+          <div className="xl:w-1/2 flex justify-center order-2 xl:order-none">
             <form
-              action=""
-              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              onSubmit={handleSubmit}
+              className="w-full max-w-[720px] flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
             >
               <h2 className="text-4xl text-accent">Let's Work Together</h2>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-                sint cillum sint consectetur cupidatat.
+                Looking for a backend or DevOps developer? Send me a message
+                about your project or role and I'll get back to you.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="text" name="firstname" placeholder="Firstname" autoComplete="given-name" required />
+                <Input type="text" name="lastname" placeholder="Lastname" autoComplete="family-name" />
+                <Input type="email" name="email" placeholder="Email address" autoComplete="email" required />
+                <Input type="tel" name="phone" placeholder="Phone number" autoComplete="tel" />
               </div>
               {/* select */}
-              <Select>
+              <Select name="service">
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a Service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
+                    {services.map((service) => (
+                      <SelectItem key={service} value={service}>
+                        {service}
+                      </SelectItem>
+                    ))}
                   </SelectGroup>
                 </SelectContent>
               </Select>
               {/* text area */}
               <Textarea
+                name="message"
+                required
                 className="h-[200px]"
                 placeholder="Type your message here."
               />
               {/* btn */}
-              <Button size="md" className="max-w-40">
-                Send Message
-              </Button>
+              <TooltipProvider delayDuration={100}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button type="submit" size="md" className="max-w-40">
+                      Send Message
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent align="start">
+                    <p>
+                      <span className="font-bold text-red-600">CAUTION:</span>{" "}
+                      Won't work if you don't have an email app set up.
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </form>
           </div>
           {/* info */}
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="xl:w-1/2 flex items-center justify-center order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => {
                 return (
@@ -100,7 +157,15 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
+                      <h3 className="text-xl">
+                        {item.href ? (
+                          <a href={item.href} target="_blank" rel="noreferrer" className="hover:text-accent transition-all">
+                            {item.description}
+                          </a>
+                        ) : (
+                          item.description
+                        )}
+                      </h3>
                     </div>
                   </li>
                 );
