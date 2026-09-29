@@ -13,7 +13,7 @@ const areas = [
   {
     num: "02",
     title: "DevOps and Cloud Infrastructure",
-    description: "I run applications both self-hosted and in the cloud. I design them to be stateless and redundant, so any instance can fail or be replaced without downtime. On my own Proxmox servers I run Docker Compose. For cloud apps that don't need heavy scaling, I use Elastic Beanstalk or Azure Container Apps. When they do, I use Kubernetes with KEDA. In my spare time I spin up clusters on AWS and load test them with k6, comparing providers, autoscalers, ingress controllers, and control plane setups.",
+    description: "I run applications both self-hosted and in the cloud. I design them to be stateless and redundant, so any instance can fail or be replaced without downtime. On my own Proxmox servers I run Docker Compose. For cloud apps that don't need heavy scaling, I use ECS or ACA. When they do, I use Kubernetes with KEDA.",
     href: "/work",
   },
   {
