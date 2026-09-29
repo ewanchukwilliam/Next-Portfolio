@@ -66,10 +66,6 @@ const about = {
 			fieldValue: "wewanchu@ualberta.ca",
 		},
 		{
-			fieldName: "Portfolio",
-			fieldValue: "williamewanchukportfolio.ca",
-		},
-		{
 			fieldName: "Blog",
 			fieldValue: "ewanchukwilliam.com",
 		},
