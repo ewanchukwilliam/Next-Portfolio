@@ -18,7 +18,7 @@ const Home = () => {
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
 I’m a Computer Engineering Co-op student at the University of Alberta graduating in May 2027, with experience building and operating production backend, web, and cloud systems.
-I’m most interested in backend and platform engineering, particularly distributed systems, cloud infrastructure, and reliability. Outside of work, I build with Java, Spring Boot, Kubernetes, and AWS.            </p>
+I’m most interested in platform engineering, particularly distributed systems, IAC, and reliability. Outside of work, I build with Java, Spring Boot, Kubernetes, and AWS.            </p>
             {/**/}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
