@@ -23,7 +23,7 @@ const projects = [
   {
     num: "01",
     category: "internship",
-    label: "Current Internship",
+    label: "10-Month Internship",
     title: "Full Stack Developer/DevOps",
     description: "Co-op at North American Construction Group (April 2026 – Current) on a company-wide rewrite of the field maintenance platform used at North American and Australian mining sites. Building the .NET backend and a direct integration replacing manual JDE Oracle coordination. Designed the blue/green zero-downtime release pipeline, containerized CI builds (80% faster), owned Azure Blob storage from design to production, and instrumented OpenTelemetry tracing. Also built the React web app and a SQLite-backed offline mode for the React Native client.",
     stack: [
@@ -167,7 +167,7 @@ const Work = () => {
       className="min-h-[80vh] flex flex-col py-12 xl:py-8 xl:px-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:items-start xl:gap-[60px]">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:gap-[60px] xl:min-h-[calc(100svh-176px)]">
           <div className="w-full xl:w-[40%] flex flex-col order-2 xl:order-none">
             <div className="flex flex-col gap-[20px]">
               {/* project id */}

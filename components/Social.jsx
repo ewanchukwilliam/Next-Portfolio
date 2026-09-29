@@ -3,23 +3,37 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaBlog } from "react-icons/fa";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 const socials = [
-  { icon: <FaGithub />, path: "https://github.com/ewanchukwilliam" },
-  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/william-ewanchuk-920002239/" },
-  { icon: <FaBlog />, path: "https://www.ewanchukwilliam.com" },
+  { icon: <FaGithub />, path: "https://github.com/ewanchukwilliam", label: "GitHub" },
+  { icon: <FaLinkedinIn />, path: "https://www.linkedin.com/in/william-ewanchuk-920002239/", label: "LinkedIn" },
+  { icon: <FaBlog />, path: "https://www.ewanchukwilliam.com", label: "Blog" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
   return (
-    <div className={containerStyles}>
-      {socials.map((item, index) => {
-        return (
-          <Link key={index} href={item.path} target="_blank" rel="noreferrer" className={iconStyles}>
-            {item.icon}
-          </Link>
-        );
-      })}
-    </div>
+    <TooltipProvider delayDuration={100}>
+      <div className={containerStyles}>
+        {socials.map((item, index) => {
+          return (
+            <Tooltip key={index}>
+              <TooltipTrigger asChild>
+                <Link href={item.path} target="_blank" rel="noreferrer" aria-label={item.label} className={iconStyles}>
+                  {item.icon}
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>{item.label}</TooltipContent>
+            </Tooltip>
+          );
+        })}
+      </div>
+    </TooltipProvider>
   );
 };
 

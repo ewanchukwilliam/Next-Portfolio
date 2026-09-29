@@ -26,6 +26,7 @@ import {
 	SiHelm,
 	SiTerraform,
 	SiAnsible,
+	SiProxmox,
 	SiNginx,
 	SiCloudflare,
 	SiLinux,
@@ -39,6 +40,7 @@ import {
 	SiOpentelemetry,
 	SiJunit5,
 	SiGit,
+	SiNeovim,
 } from "react-icons/si";
 import { TbBrandCSharp, TbSql } from "react-icons/tb";
 
@@ -134,51 +136,53 @@ const skills = {
 	description:
 		"Backend and DevOps developer building services in .NET, Spring Boot, Django, and FastAPI on PostgreSQL and Redis. Experienced shipping to Azure (Container Apps, ACR, Blob Storage) and AWS (EKS, EC2, S3, RDS, CloudWatch) with Docker, Kubernetes, KEDA, Helm, Terraform, and Ansible, running CI/CD through Azure DevOps, GitHub Actions, and GitLab CI, and monitoring with OpenTelemetry, Application Insights, Prometheus, and Grafana. Comfortable building React and Next.js frontends when a project needs one.",
 	skillList: [
-		// backend languages and frameworks
+		// core backend and devops
 		{ icon: <SiPython />, name: "Python" },
 		{ icon: <TbBrandCSharp />, name: "C#" },
-		{ icon: <SiOpenjdk />, name: "Java" },
-		{ icon: <SiTypescript />, name: "TypeScript" },
-		{ icon: <TbSql />, name: "SQL" },
-		{ icon: <SiGnubash />, name: "Bash" },
-		{ icon: <SiC />, name: "C" },
-		{ icon: <SiCplusplus />, name: "C++" },
 		{ icon: <SiDotnet />, name: ".NET" },
+		{ icon: <SiOpenjdk />, name: "Java" },
 		{ icon: <SiSpringboot />, name: "Spring Boot" },
 		{ icon: <SiDjango />, name: "Django" },
 		{ icon: <SiFastapi />, name: "FastAPI" },
-		{ icon: <SiNodedotjs />, name: "Node.js" },
-		{ icon: <SiExpress />, name: "Express.js" },
-		// databases
-		{ icon: <SiPostgresql />, name: "PostgreSQL" },
-		{ icon: <SiRedis />, name: "Redis" },
-		{ icon: <SiSqlite />, name: "SQLite" },
-		{ icon: <SiMysql />, name: "MySQL" },
-		{ icon: <SiMongodb />, name: "MongoDB" },
-		// cloud and devops
-		{ icon: <SiMicrosoftazure />, name: "Azure" },
-		{ icon: <SiAmazonaws />, name: "AWS" },
 		{ icon: <SiDocker />, name: "Docker" },
 		{ icon: <SiKubernetes />, name: "Kubernetes / KEDA" },
-		{ icon: <SiHelm />, name: "Helm" },
+		{ icon: <SiMicrosoftazure />, name: "Azure" },
+		{ icon: <SiAmazonaws />, name: "AWS" },
 		{ icon: <SiTerraform />, name: "Terraform" },
+		{ icon: <SiPostgresql />, name: "PostgreSQL" },
+		{ icon: <SiRedis />, name: "Redis" },
+		{ icon: <TbSql />, name: "SQL" },
+		{ icon: <SiGnubash />, name: "Bash" },
+		{ icon: <SiLinux />, name: "Linux/Unix" },
+		// infrastructure, ci/cd and observability
+		{ icon: <SiHelm />, name: "Helm" },
 		{ icon: <SiAnsible />, name: "Ansible" },
+		{ icon: <SiProxmox />, name: "Proxmox" },
 		{ icon: <SiNginx />, name: "Nginx" },
 		{ icon: <SiCloudflare />, name: "Cloudflare" },
-		{ icon: <SiLinux />, name: "Linux/Unix" },
-		// ci/cd and observability
-		{ icon: <SiGit />, name: "Git" },
 		{ icon: <SiAzuredevops />, name: "Azure DevOps" },
 		{ icon: <SiGithubactions />, name: "GitHub Actions" },
 		{ icon: <SiGitlab />, name: "GitLab CI" },
 		{ icon: <SiOpentelemetry />, name: "OpenTelemetry" },
 		{ icon: <SiPrometheus />, name: "Prometheus" },
 		{ icon: <SiGrafana />, name: "Grafana" },
+		// other backend tools
+		{ icon: <SiTypescript />, name: "TypeScript" },
+		{ icon: <SiNodedotjs />, name: "Node.js" },
+		{ icon: <SiExpress />, name: "Express.js" },
+		{ icon: <SiSqlite />, name: "SQLite" },
+		{ icon: <SiMysql />, name: "MySQL" },
+		{ icon: <SiMongodb />, name: "MongoDB" },
 		{ icon: <SiJunit5 />, name: "JUnit" },
+		{ icon: <SiGit />, name: "Git" },
+		{ icon: <SiNeovim />, name: "Vim / Neovim" },
 		// frontend
 		{ icon: <SiReact />, name: "React.js" },
 		{ icon: <SiNextdotjs />, name: "Next.js" },
 		{ icon: <SiJavascript />, name: "JavaScript" },
+		// embedded
+		{ icon: <SiC />, name: "C" },
+		{ icon: <SiCplusplus />, name: "C++" },
 	],
 };
 
@@ -244,12 +248,12 @@ const Resume = () => {
 					<div className="w-full">
 						{/* experience */}
 						<TabsContent value="experience" className="w-full">
-							<div className="flex flex-col gap-[30px] text-center xl:text-left">
+							<div className="flex flex-col gap-[30px] text-center xl:text-left h-[calc(100svh-192px)] xl:h-[calc(100svh-176px)] min-h-[420px]">
 								<h3 className="text-4xl font-bold ">{experience.title}</h3>
-								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+								<p className="max-w-[600px] xl:max-w-none text-white/60 mx-auto xl:mx-0">
 									{experience.description}
 								</p>
-								<ScrollArea className="h-[400px]">
+								<ScrollArea className="flex-1 min-h-0">
 									<ul className="grid grid-col-1 lg:grid-cols-2 gap-[30px]">
 										{experience.items.map((item, index) => {
 											return (
@@ -276,12 +280,12 @@ const Resume = () => {
 						{/* education */}
 
 						<TabsContent value="education" className="w-full">
-							<div className="flex flex-col gap-[30px] text-center xl:text-left">
+							<div className="flex flex-col gap-[30px] text-center xl:text-left h-[calc(100svh-192px)] xl:h-[calc(100svh-176px)] min-h-[420px]">
 								<h3 className="text-4xl font-bold ">{education.title}</h3>
-								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+								<p className="max-w-[600px] xl:max-w-none text-white/60 mx-auto xl:mx-0">
 									{education.description}
 								</p>
-								<ScrollArea className="h-[400px]">
+								<ScrollArea className="flex-1 min-h-0">
 									<ul className="grid grid-col-1 lg:grid-cols-2 gap-[30px]">
 										{education.items.map((item, index) => {
 											return (
@@ -308,21 +312,21 @@ const Resume = () => {
 						{/* skills */}
 
 						<TabsContent value="skills" className="w-full">
-							<div className="flex flex-col gap-[30px]">
+							<div className="flex flex-col gap-[30px] h-[calc(100svh-192px)] xl:h-[calc(100svh-176px)] min-h-[420px]">
 								<div className="flex flex-col gap-[30px] text-center xl:text-left">
 									<h3 className="text-4xl font-bold">{skills.title}</h3>
-									<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+									<p className="max-w-[600px] xl:max-w-none text-white/60 mx-auto xl:mx-0">
 										{skills.description}
 									</p>
 								</div>
-								<ScrollArea className="h-[400px]">
-									<ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
+								<ScrollArea className="flex-1 min-h-0">
+									<ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 xl:gap-[24px] gap-4">
 									{skills.skillList.map((skill, index) => {
 										return (
 											<li key={index}>
 												<TooltipProvider delayDuration={100}>
 													<Tooltip>
-														<TooltipTrigger className=" w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center">
+														<TooltipTrigger className=" w-full h-[120px] bg-[#232329] rounded-xl flex justify-center items-center">
 															<div className="text-6xl group-hover:tetxt-accent transition-all duration-300">
 																{skill.icon}
 															</div>
@@ -341,12 +345,12 @@ const Resume = () => {
 						</TabsContent>
 						{/* scholarships */}
 						<TabsContent value="scholarships" className="w-full">
-							<div className="flex flex-col gap-[30px] text-center xl:text-left">
+							<div className="flex flex-col gap-[30px] text-center xl:text-left h-[calc(100svh-192px)] xl:h-[calc(100svh-176px)] min-h-[420px]">
 								<h3 className="text-4xl font-bold ">{scholarships.title}</h3>
-								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+								<p className="max-w-[600px] xl:max-w-none text-white/60 mx-auto xl:mx-0">
 									{scholarships.description}
 								</p>
-								<ScrollArea className="h-[400px]">
+								<ScrollArea className="flex-1 min-h-0">
 									<ul className="grid grid-col-1 lg:grid-cols-2 gap-[30px]">
 										{scholarships.items.map((item, index) => {
 											return (
@@ -374,7 +378,7 @@ const Resume = () => {
 						>
 							<div className="flex flex-col gap-[30px]">
 								<h3 className="text-4xl font-bold">{about.title}</h3>
-								<p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+								<p className="max-w-[600px] xl:max-w-none text-white/60 mx-auto xl:mx-0">
 									{about.description}
 								</p>
 								<ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 gap-x-12">
