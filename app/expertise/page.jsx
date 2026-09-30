@@ -7,7 +7,7 @@ const areas = [
   {
     num: "01",
     title: "Backend and API Development",
-    description: "I enjoy designing my backend applications in object-oriented languages. I prefer to build backends to be easy to maintain, with only the abstractions they need, and prefer interfaces over inheritance. I enforce business invariants through domain-driven design (DDD).",
+    description: "I build backend services primarily in object-oriented languages, with an emphasis on clear domain models and maintainable APIs. I use domain-driven design (DDD) where the problem warrants it, keeping business invariants close to the domain and abstractions proportional to the complexity they solve. I generally favor composition and explicit interfaces over deep inheritance hierarchies.",
     href: "/work",
   },
   {
@@ -19,13 +19,13 @@ const areas = [
   {
     num: "03",
     title: "CI/CD and Observability",
-    description: "I design pipelines that cleanly separate application development from infrastructure management. The cleaner the design, the less day to day friction for everyone. For observability I use OpenTelemetry for traces, Prometheus for metrics, and Grafana for dashboards.",
+    description: "I build delivery pipelines around repeatable builds, explicit deployment stages, and clear boundaries between application and infrastructure changes. In production, I instrument applications with OpenTelemetry and use metrics, traces, logs, and dashboards to make system behavior and failures easier to understand.",
     href: "/work",
   },
   {
     num: "04",
     title: "Full Stack Development",
-    description: "I build frontends in React and React Native with TypeScript. I keep business rules on the server so the UI stays simple and easy to change. I use TanStack for data fetching and caching instead of rolling my own, and design mobile apps to keep working offline.",
+    description: "I build web applications with React and TypeScript and mobile applications with React Native. I use TanStack Query for server state and data fetching, and component libraries where they make sense. Most of my frontend work supports the backend systems and APIs I build.",
     href: "/work",
   },
 ];
