@@ -50,7 +50,7 @@ const info = [
 
 const areas = [
   "Backend & API Development",
-  "DevOps & Cloud Infrastructure",
+  "DevOps & Platform Engineering",
   "CI/CD & Observability",
   "Full Stack Development",
 ];

@@ -12,9 +12,9 @@ const areas = [
   },
   {
     num: "02",
-    title: "DevOps and Cloud Infrastructure",
-    description: "I run applications both self-hosted and in the cloud. I design them to be stateless and redundant, so any instance can fail or be replaced without downtime. On my own Proxmox servers I run Docker Compose. For cloud apps that don't need heavy scaling, I use ECS or ACA. When they do, I use Kubernetes with KEDA.",
-    href: "/work",
+    title: "DevOps and Platform Engineering",
+    description: "I’ve discovered that I really enjoy designing smooth developer workflows. That started with customizing my own development environment in Neovim, grew into building internal tooling, and eventually led me toward DevOps and platform engineering. I build repeatable paths from development to production, automate operational workflows, and create common patterns for deployment, configuration, observability, and recovery. I want infrastructure to reduce the operational burden on developers without hiding how the system actually works.",
+    href: "/work"
   },
   {
     num: "03",
