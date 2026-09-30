@@ -13,7 +13,7 @@ const areas = [
   {
     num: "02",
     title: "DevOps and Platform Engineering",
-    description: "I’ve discovered that I really enjoy designing smooth developer workflows. That started with customizing my own development environment in Neovim, grew into building internal tooling, and eventually led me toward DevOps and platform engineering. I build repeatable paths from development to production, automate operational workflows, and create common patterns for deployment, configuration, observability, and recovery. I want infrastructure to reduce the operational burden on developers without hiding how the system actually works.",
+    description: "I work on the systems between source code and production: build and deployment pipelines, infrastructure, runtime environments, observability, and developer tooling. I care about reproducibility, safe delivery, useful operational feedback, and reducing toil through automation and self-service. I try to keep the platform proportional to the problem—adding orchestration and abstraction where they provide clear operational value.",
     href: "/work"
   },
   {
