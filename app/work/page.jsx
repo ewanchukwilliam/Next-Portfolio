@@ -137,22 +137,6 @@ const projects = [
     live: "https://www.ewanchukwilliam.com",
     github: "https://github.com/ewanchukwilliam/Live-Blog",
   },
-  {
-    num: "06",
-    category: "backend",
-    title: "Insider Trading Tracker",
-    description: "Python ETL pipeline tracking congressional stock trades from 3 financial APIs on an hourly cron. Plots trade dates against historical options data. Runs in Docker with PostgreSQL.",
-    stack: [
-      { name: "Python" },
-      { name: "Docker" },
-      { name: "PostgreSQL" },
-      { name: "Cron" },
-      { name: "FMP APIs" },
-    ],
-    image: "/assets/backendproject.png",
-    live: "",
-    github: "https://github.com/ewanchukwilliam/Live-Insider-Trading-Analytics",
-  },
 ];
 
 const Work = () => {
