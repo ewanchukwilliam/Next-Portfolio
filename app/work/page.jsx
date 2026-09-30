@@ -122,7 +122,7 @@ const projects = [
     category: "side",
     label: "Read My Blog",
     title: "rm -rf thefrench",
-    description: "My blog on internships, take-home exams, and books I'm reading. Built with Nuxt 4 and Nuxt Content, so posts are just Markdown files. Deploys to Vercel on every push.",
+    description: "Documentation recording my trials and tribulations as a developer. Might become more technical in the future, but for now just covers guiding principals, learned goodies, and interesting books/resources I find throughout my software development journey",
     stack: [
       { name: "Nuxt 4" },
       { name: "Vue" },
