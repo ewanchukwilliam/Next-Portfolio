@@ -43,7 +43,7 @@ import { TbBrandCSharp, TbSql } from "react-icons/tb";
 const about = {
 	title: "About me",
 	description:
-		"Computer Engineering Co-op student at the University of Alberta, focused on backend and DevOps. Currently a co-op at North American Construction Group after a 10-month internship at Stepscale.ai.",
+		"Computer Engineering Co-op student at the University of Alberta, focused on backend systems. Currently a co-op at North American Construction Group after a 10-month internship at Stepscale.ai.",
 	info: [
 		{
 			fieldName: "Name",
@@ -126,7 +126,7 @@ const education = {
 const skills = {
 	title: "My skills",
 	description:
-		"Backend and DevOps developer working in Spring Boot, .NET, Django, and FastAPI. I ship to Azure and AWS with Docker, Kubernetes, and Terraform, and monitor with OpenTelemetry, Prometheus, and Grafana.",
+		"I work in Spring Boot, .NET, Django, and FastAPI. I ship to Azure and AWS with Docker, Kubernetes, and Terraform, and monitor with OpenTelemetry, Prometheus, and Grafana.",
 	skillList: [
 		// core backend and devops
 		{ icon: <SiOpenjdk />, name: "Java" },

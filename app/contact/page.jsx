@@ -95,7 +95,7 @@ const Contact = () => {
             >
               <h2 className="text-4xl text-accent">Let's Work Together</h2>
               <p className="text-white/60">
-                Hiring for a backend or DevOps role? Send me a message.
+                Hiring a backend software engineer? Send me a message.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
